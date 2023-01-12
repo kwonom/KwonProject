@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Bricks_11
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1576851637, guid: 2abe38da6ab85524b947c8981a56a9a5, type: 3}
+  m_Sprite: {fileID: 331295440, guid: aceec42e76ce06f4ab5ba14de95886a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
