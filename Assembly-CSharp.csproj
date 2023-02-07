@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bounce.cs" />
+    <Compile Include="Assets\Scripts\Brick.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
