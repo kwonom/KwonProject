@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Brick.cs" />
     <Compile Include="Assets\Scripts\Bounce.cs" />
+    <Compile Include="Assets\Scripts\GateController.cs" />
+    <Compile Include="Assets\Scripts\SpawnGate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
