@@ -778,12 +778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33afb20376139294f856f56a64167867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pgate:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _gate: {fileID: 2646588905478214542, guid: 7e6d00e3010fdd64daa0117c7ea4b0dc, type: 3}
   _sgate: {fileID: 8349691433345564532, guid: 8d53fadf5986d804c9543cc6da226c14, type: 3}
   _tgate: {fileID: 221077667651953152, guid: 239a446747ea8704eafceb20f06c566e, type: 3}
@@ -864,7 +858,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 204763639
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.009433985, g: 0.008855485, b: 0.008855485, a: 1}

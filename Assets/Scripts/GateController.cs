@@ -9,6 +9,8 @@ public class GateController : MonoBehaviour
     [SerializeField] GameObject _tgate;
     [SerializeField] GameObject _fgate;
     [SerializeField] GameObject _figate;
+    
+     
 
     // Start is called before the first frame update
     void Start()
@@ -65,4 +67,6 @@ public class GateController : MonoBehaviour
         GameObject gate = Instantiate(_figate);
         gate.transform.position = gpos;
     }
+
+    
 }

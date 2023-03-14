@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class SpawnGate : MonoBehaviour
 {
-
+    [SerializeField] GameObject _gate; 
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class SpawnGate : MonoBehaviour
             Debug.Log("게이트 생성");
         }
     }
+
 
     
     // Update is called once per frame
