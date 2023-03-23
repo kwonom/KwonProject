@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Bounce.cs" />
     <Compile Include="Assets\Scripts\GateController.cs" />
     <Compile Include="Assets\Scripts\SpawnGate.cs" />
+    <Compile Include="Assets\Scripts\GameManagerUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

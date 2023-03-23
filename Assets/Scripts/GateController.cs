@@ -12,12 +12,9 @@ public class GateController : MonoBehaviour
         makeGate();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnGame()
     {
-        if(collision.gameObject.name == "Brick")
-        {
-            Debug.Log("게이트 생성");
-        }
+        
     }
     public void makeGate()
     {

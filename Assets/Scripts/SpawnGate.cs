@@ -14,13 +14,13 @@ public class SpawnGate : MonoBehaviour
         
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.name == "Brick")
-    //    {
-    //        Debug.Log("게이트 생성");
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Brick")
+        {
+            Debug.Log("게이트 생성");
+        }
+    }
 
     public void AddGate()
     {
