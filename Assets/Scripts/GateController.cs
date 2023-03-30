@@ -12,10 +12,6 @@ public class GateController : MonoBehaviour
         makeGate();
     }
 
-    void OnGame()
-    {
-        
-    }
     public void makeGate()
     {
         for(int i = 0; i < _gates.Length; i++)
