@@ -9,6 +9,7 @@ public class Brick : MonoBehaviour
     [SerializeField] float yjump;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject _endpanel;
+    [SerializeField] GateController _GCon;
 
     int score = 0;
     bool _isGameover = false;
@@ -77,4 +78,8 @@ public class Brick : MonoBehaviour
         Debug.Log(score);
     }
 
+    public void spGate()
+    {
+        _GCon.SpawnGate();
+    }
 }
