@@ -1,7 +1,7 @@
 using System.Collections;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Brick : MonoBehaviour
 {
@@ -10,10 +10,14 @@ public class Brick : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject _endpanel;
     [SerializeField] GateController _GCon;
+    [SerializeField] Text _scoreText;
+    [SerializeField] GameObject _OptionUI;
 
     int score = 0;
     bool _isGameover = false;
     bool _isGameStart = false;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,19 +58,26 @@ public class Brick : MonoBehaviour
     IEnumerator CoBrickDead()
     {
         _isGameover = true;
+        yield return null;
+        OptionOpen();
 
-        while (_isGameover)
-        {
-            rb.gravityScale = 1;
-            Time.timeScale = 1;
-            yield return new WaitForSecondsRealtime(2f);
-            SceneManager.LoadScene("Lobby");
-        }
+        //while (_isGameover)
+        //{
+        //    rb.gravityScale = 1;
+        //    Time.timeScale = 1;
+        //    yield return new WaitForSecondsRealtime(2f);
+        //    SceneManager.LoadScene("Lobby");
+        //}
     }
 
+    void OptionOpen()
+    {
+        _OptionUI.SetActive(true);
+        _OptionUI.GetComponent<GameUI>().SetScore(score);
+    }
     void OnGameStart()
     {
-        if(_isGameStart == false)
+        if (_isGameStart == false)
         {
             Time.timeScale = 1;
         }
@@ -74,8 +85,12 @@ public class Brick : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        score++;
-        Debug.Log(score);
+        if (_isGameStart == true && _isGameover == false)
+        {
+            score++;
+            Debug.Log(score);
+            _scoreText.text = "Score : " + score;
+        }
     }
 
     public void spGate()
