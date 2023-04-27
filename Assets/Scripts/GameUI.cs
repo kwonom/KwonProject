@@ -5,6 +5,7 @@ public class GameUI : MonoBehaviour
 {
     [SerializeField] InputField _text;
     [SerializeField] ScoreList _scorePanel;
+    
     string PlayerName = null;
     int score = 0;
 
@@ -28,7 +29,8 @@ public class GameUI : MonoBehaviour
     {
         PlayerName = _text.text;
         // 플레이어 이름, 스코어 저장
+        Debug.Log(_text.text);
         _scorePanel.gameObject.SetActive(true);
-        _scorePanel.ShowList();
+        //_scorePanel.ShowList();
     }
 }

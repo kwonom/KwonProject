@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Brick : MonoBehaviour
@@ -16,19 +15,13 @@ public class Brick : MonoBehaviour
     int score = 0;
     bool _isGameover = false;
     bool _isGameStart = false;
-    
 
-
-    // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 30;
         Time.timeScale = 0;
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -60,14 +53,6 @@ public class Brick : MonoBehaviour
         _isGameover = true;
         yield return null;
         OptionOpen();
-
-        //while (_isGameover)
-        //{
-        //    rb.gravityScale = 1;
-        //    Time.timeScale = 1;
-        //    yield return new WaitForSecondsRealtime(2f);
-        //    SceneManager.LoadScene("Lobby");
-        //}
     }
 
     void OptionOpen()
@@ -88,7 +73,6 @@ public class Brick : MonoBehaviour
         if (_isGameStart == true && _isGameover == false)
         {
             score++;
-            Debug.Log(score);
             _scoreText.text = "Score : " + score;
         }
     }

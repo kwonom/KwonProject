@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreList : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] CSVController _csvCon;
+
     void Start()
     {
         
@@ -29,8 +31,9 @@ public class ScoreList : MonoBehaviour
         SceneManager.LoadScene("Lobby");
     }
 
-    public void ShowList()
-    {
-        // 점수 목록 보여주기
-    }
+    //public void ShowList(RankingData data)
+    //{
+        
+
+    //}
 }
