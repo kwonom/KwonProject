@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScoreList : MonoBehaviour
 {
     [SerializeField] CSVController _csvCon;
-
+    
     void Start()
     {
         
@@ -31,9 +31,11 @@ public class ScoreList : MonoBehaviour
         SceneManager.LoadScene("Lobby");
     }
 
-    //public void ShowList(RankingData data)
-    //{
-        
-
-    //}
+    public void ShowList()
+    {
+        foreach(RankingData data in _csvCon._lstRanking)
+        {
+            
+        }
+    }
 }
