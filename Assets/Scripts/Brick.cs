@@ -20,6 +20,7 @@ public class Brick : MonoBehaviour
     {
         Application.targetFrameRate = 30;
         Time.timeScale = 0;
+        Debug.Log("브릭에서 호출되었습니다.");
     }
 
     void Update()

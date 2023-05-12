@@ -11,6 +11,7 @@ public class GateController : MonoBehaviour
     void Start()
     {
         makeGate();
+        Debug.Log("게이트에서 호출되었습니다.");
     }
 
     public void makeGate()

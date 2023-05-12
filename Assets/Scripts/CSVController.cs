@@ -19,6 +19,7 @@ public class CSVController : MonoBehaviour
     {
         ReadCSV();
         WriteCSV();
+        Debug.Log("csv에서 호출되었습니다.");
     }
 
     void WriteCSV()
