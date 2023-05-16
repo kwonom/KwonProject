@@ -41,7 +41,7 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground") // 여기까지 진행.
         {
             Time.timeScale = 0;
             StartCoroutine(CoBrickDead());
