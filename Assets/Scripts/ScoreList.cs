@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ScoreList : MonoBehaviour
 {
-    [SerializeField] CSVController _csvCon;
+    [SerializeField] CSVController _csvCon; 
     
     void Start()
     {

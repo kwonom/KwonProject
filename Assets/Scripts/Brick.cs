@@ -56,8 +56,9 @@ public class Brick : MonoBehaviour
         OptionOpen();
     }
 
-    void OptionOpen()
+    public void OptionOpen()
     {
+        Time.timeScale = 0;
         _OptionUI.SetActive(true);
         _OptionUI.GetComponent<GameUI>().SetScore(score);
     }
