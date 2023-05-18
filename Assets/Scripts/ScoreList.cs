@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class ScoreList : MonoBehaviour
 {
-    [SerializeField] CSVController _csvCon; 
+    [SerializeField] CSVController _csvCon;
+    [SerializeField] GameObject _item;
+    [SerializeField] Transform _content;
     
+    List<GameObject> lstItems = new List<GameObject>();
     void Start()
     {
         
