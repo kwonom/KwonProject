@@ -5,9 +5,10 @@ public class GameUI : MonoBehaviour
 {
     [SerializeField] InputField _text;
     [SerializeField] ScoreList _scorePanel;
+    [SerializeField] CSVController _csvCon;
 
-   
-    
+
+
     string PlayerName = null;
     int score = 0;
 
@@ -16,25 +17,13 @@ public class GameUI : MonoBehaviour
         score = x;
     }
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void NameButton()
     {
+        RankingData data = new RankingData();
+        data.SetData(_text.text, score);
         PlayerName = _text.text;
-        // 플레이어 이름, 스코어 저장
-        Debug.Log(_text.text);
-        Debug.Log(score);
+        _csvCon._lstRanking.Add(data);
+        _csvCon.WriteCSV();
         _scorePanel.gameObject.SetActive(true);
         _scorePanel.ShowList();
     }

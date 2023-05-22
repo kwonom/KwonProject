@@ -9,17 +9,7 @@ public class ScoreList : MonoBehaviour
     [SerializeField] Transform _content;
 
     List<GameObject> lstItems = new List<GameObject>();
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     public void ReStart()
     {
         Time.timeScale = 1;
@@ -40,7 +30,5 @@ public class ScoreList : MonoBehaviour
             temp.GetComponent<SetItem>().Init(data);
             lstItems.Add(temp);
         }
-
-
     }
 }

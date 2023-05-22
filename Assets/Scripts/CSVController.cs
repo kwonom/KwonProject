@@ -1,19 +1,12 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 public class CSVController : MonoBehaviour
 {
-    
-    
     public List<RankingData> _lstRanking = new List<RankingData>();
     void Start()
     {
@@ -22,10 +15,10 @@ public class CSVController : MonoBehaviour
         Debug.Log("csv에서 호출되었습니다.");
     }
 
-    void WriteCSV()
+    public void WriteCSV()
     {
-        string fileName = "RankingList" + DateTime.Now.ToString("yyMMddHHmmss") + ".csv";
-        Debug.Log(fileName);
+        string fileName = "RankingList.csv";
+        
         StringBuilder sb = new StringBuilder();
 
         string filePath = Application.dataPath + "/Resources/Datas/" + fileName;
@@ -67,10 +60,6 @@ public class CSVController : MonoBehaviour
             }
         }
         
-        for(int i = 0; i < _lstRanking.Count; i++)
-        {
-            Debug.Log(_lstRanking[i].GetName() + _lstRanking[i].GetScore());
-        }
     }
 }
 
