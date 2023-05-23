@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,7 @@ public class ScoreList : MonoBehaviour
     [SerializeField] Transform _content;
 
     List<GameObject> lstItems = new List<GameObject>();
-    
+
     public void ReStart()
     {
         Time.timeScale = 1;
@@ -24,7 +25,10 @@ public class ScoreList : MonoBehaviour
 
     public void ShowList()
     {
-        foreach (RankingData data in _csvCon._lstRanking)
+        var datas = from data in _csvCon._lstRanking
+                    orderby data.GetScore() descending
+                    select data;
+        foreach (RankingData data in datas.Take(5))
         {
             GameObject temp = Instantiate(_item, _content);
             temp.GetComponent<SetItem>().Init(data);
