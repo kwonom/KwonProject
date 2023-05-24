@@ -28,10 +28,11 @@ public class ScoreList : MonoBehaviour
         var datas = from data in _csvCon._lstRanking
                     orderby data.GetScore() descending
                     select data;
+        int count = 1;
         foreach (RankingData data in datas.Take(5))
         {
             GameObject temp = Instantiate(_item, _content);
-            temp.GetComponent<SetItem>().Init(data);
+            temp.GetComponent<SetItem>().Init(data, count++);
             lstItems.Add(temp);
         }
     }

@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class SetItem : MonoBehaviour
 {
-    [SerializeField] Image _image;
     [SerializeField] Text _Nametext;
     [SerializeField] Text _scoreText;
-
+    [SerializeField] Text _rankText;
+    [SerializeField] Image _image;
     
     RankingData _data;
-    
 
-    public void Init(RankingData data)
+    public void Init(RankingData data, int rank)
     {
+        _rankText.text = rank.ToString();
         _data = data;
-        _Nametext.text = "이름 : " + data.GetName();
-        _scoreText.text = "점수 : " + data.GetScore();
+        _Nametext.text = data.GetName();
+        _scoreText.text = data.GetScore().ToString();
     }
 }

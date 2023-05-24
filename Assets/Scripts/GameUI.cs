@@ -1,15 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 public class GameUI : MonoBehaviour
 {
     [SerializeField] InputField _text;
     [SerializeField] ScoreList _scorePanel;
     [SerializeField] CSVController _csvCon;
-
-
 
     string PlayerName = null;
     int score = 0;

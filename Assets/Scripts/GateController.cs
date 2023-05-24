@@ -5,7 +5,6 @@ public class GateController : MonoBehaviour
     [SerializeField] GameObject[] _gates;
     float sumHeight = 0;
     
-    // Start is called before the first frame update
     void Start()
     {
         makeGate();

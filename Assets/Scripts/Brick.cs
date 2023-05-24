@@ -62,6 +62,7 @@ public class Brick : MonoBehaviour
         _OptionUI.SetActive(true);
         _OptionUI.GetComponent<GameUI>().SetScore(score);
     }
+
     void OnGameStart()
     {
         if (_isGameStart == false)
