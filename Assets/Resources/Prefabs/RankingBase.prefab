@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3433400949325308066}
   - component: {fileID: 8430042996625741076}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Trophy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
