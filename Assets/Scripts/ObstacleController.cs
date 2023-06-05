@@ -1,32 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
     [SerializeField] GameObject _obstacle;
-    
-    float _timer;
+    [SerializeField] Transform _target;
 
-    // Start is called before the first frame update
+    float _timer = 0;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         _timer += Time.deltaTime;
 
-        if(_timer > 3)
+        if(_timer > 8)
         {
             _timer = 0;
 
-            GameObject obs = Instantiate(_obstacle);
-
-            obs.transform.position = new Vector3(-17, 20, 0);
+            Vector3 obspos = transform.position;
+            obspos.y = _target.position.y - 10;
+            transform.position = obspos;
         }
-        Debug.Log("장애물 생성");
     }
+
 }
