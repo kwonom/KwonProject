@@ -21,7 +21,7 @@ public class CSVController : MonoBehaviour
         
         StringBuilder sb = new StringBuilder();
 
-        string filePath = Application.dataPath + "/Resources/Datas/" + fileName;
+        string filePath = Application.persistentDataPath + "/" + fileName;
         sb.AppendLine("이름,점수");
 
         for(int i = 0; i < _lstRanking.Count; i++)
@@ -37,7 +37,7 @@ public class CSVController : MonoBehaviour
 
     void ReadCSV()
     {
-        string path = Application.dataPath + "/Resources/Datas/RankingList.csv";
+        string path = Application.persistentDataPath + "/RankingList.csv";
         if (File.Exists(path))
         {
             string source;
