@@ -25,17 +25,19 @@ public class Brick : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             rb.velocity = new Vector2(-xjump, yjump);
             OnGameStart();
             _isGameStart = true;
+            SoundController.instance.OnBtnPlayFx();
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             rb.velocity = new Vector2(xjump, yjump);
             OnGameStart();
             _isGameStart = true;
+            SoundController.instance.OnBtnPlayFx();
         }
     }
 
@@ -43,6 +45,7 @@ public class Brick : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground") // 여기까지 진행.
         {
+            SoundController.instance.OnBtnPlayFx2();
             Time.timeScale = 0;
             StartCoroutine(CoBrickDead());
             _endpanel.SetActive(true);
