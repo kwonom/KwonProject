@@ -35,9 +35,9 @@ public class SoundController : MonoBehaviour
 
     public void OnBtnPlayBgm()
     {
-        _BGMPlayer.clip = _BGM;
-        _BGMPlayer.Play();
-        _BGMSlider.gameObject.SetActive(true);
+    //    _BGMPlayer.clip = _BGM;
+    //    _BGMPlayer.Play();
+        _BGMSlider.gameObject.SetActive(!_BGMSlider.isActiveAndEnabled);
     }
 
     public void OnBtnPlayFx()
