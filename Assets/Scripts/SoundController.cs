@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundController : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class SoundController : MonoBehaviour
     [SerializeField] AudioSource _BGMPlayer;
     [SerializeField] AudioSource _fxPlayer;
     [SerializeField] AudioSource _fxPlayer2;
-    //[SerializeField] Slider _BGMSlider;
-
+    [SerializeField] Slider _BGMSlider;
+ 
     private void Awake()
     {
         if(instance == null)
@@ -24,16 +25,7 @@ public class SoundController : MonoBehaviour
         }
         _BGMPlayer.mute = false;
         _BGMPlayer.volume = 1f;
-        //_BGMSlider.value = 1f;
-    }
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+        _BGMSlider.value = 1f;
     }
 
     public void OnbgmMute()
@@ -41,15 +33,11 @@ public class SoundController : MonoBehaviour
         _BGMPlayer.mute = !_BGMPlayer.mute;
     }
 
-    //public void OnBgmVolumeChange()
-    //{
-    //    _BGMPlayer.volume = _BGMSlider.value;
-    //}
-
     public void OnBtnPlayBgm()
     {
         _BGMPlayer.clip = _BGM;
         _BGMPlayer.Play();
+        _BGMSlider.gameObject.SetActive(true);
     }
 
     public void OnBtnPlayFx()
@@ -62,5 +50,10 @@ public class SoundController : MonoBehaviour
     {
         _fxPlayer2.clip = _Fx2;
         _fxPlayer2.Play();
+    }
+
+    public void OnbgmVolumeChange()
+    {
+        _BGMPlayer.volume = _BGMSlider.value;
     }
 }

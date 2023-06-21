@@ -13,6 +13,7 @@ public class Brick : MonoBehaviour
     [SerializeField] GameObject _OptionUI;
 
     int score = 0;
+    float _lifetimer;
     bool _isGameover = false;
     bool _isGameStart = false;
 
@@ -25,6 +26,8 @@ public class Brick : MonoBehaviour
 
     void Update()
     {
+        _lifetimer += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             rb.velocity = new Vector2(-xjump, yjump);
@@ -38,6 +41,11 @@ public class Brick : MonoBehaviour
             OnGameStart();
             _isGameStart = true;
             SoundController.instance.OnBtnPlayFx();
+        }
+        if (_lifetimer > 5)
+        {
+            _lifetimer = 0;
+            Time.timeScale = 2.1f;
         }
     }
 
