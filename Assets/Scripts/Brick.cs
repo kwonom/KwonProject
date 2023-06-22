@@ -22,13 +22,12 @@ public class Brick : MonoBehaviour
         Application.targetFrameRate = 30;
         Time.timeScale = 0;
         Debug.Log("브릭에서 호출되었습니다.");
-        GetComponent<SpriteRenderer>().color = ColorSave.intance.GetColor();
+        GetComponent<SpriteRenderer>().color = ColorSave.instance.GetColor();
     }
 
     void Update()
     {
-        _lifetimer += Time.deltaTime;
-
+        //_lifetimer += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.A))
         {
             rb.velocity = new Vector2(-xjump, yjump);
@@ -43,11 +42,11 @@ public class Brick : MonoBehaviour
             _isGameStart = true;
             SoundController.instance.OnBtnPlayFx();
         }
-        if (_lifetimer > 5)
-        {
-            _lifetimer = 0;
-            Time.timeScale = 2.1f;
-        }
+        //if (_lifetimer > 5)
+        //{
+        //    _lifetimer = 0;
+        //    Time.timeScale = 2.1f;
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -79,7 +78,7 @@ public class Brick : MonoBehaviour
     {
         if (_isGameStart == false)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 2.2f;
         }
     }
 

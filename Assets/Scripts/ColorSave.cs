@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 public class ColorSave : MonoBehaviour
 {
-    public static ColorSave intance;
+    public static ColorSave instance;
     Color _color;
 
     private void Awake()
     {
-        if(intance == null)
+        if(instance == null)
         {
-            intance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else

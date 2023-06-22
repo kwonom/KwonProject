@@ -564,7 +564,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 422468973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2143273a3146c1d42a31397750e3e1dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 41410a1f7bfe59a47a77c9f760add84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &422468975
@@ -1129,7 +1129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 709940404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2119829427}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnBtnGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &709940404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,7 +1263,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 728459887}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2119829427}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnBtnYellow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &728459887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,7 +1397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 770593374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2119829427}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnBtnPink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &770593374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,7 +1613,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 885729658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9faab5f00ebb67044a6153ffed33d57e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aeee922aba81cc4e9499d28caafe662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _BGMSlider: {fileID: 1732178262}
@@ -1824,7 +1860,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1253388907}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2119829427}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnBtnBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1253388907
 MonoBehaviour:
   m_ObjectHideFlags: 0
