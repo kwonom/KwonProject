@@ -10,7 +10,7 @@ public class SoundController : MonoBehaviour
     [SerializeField] AudioSource _BGMPlayer;
     [SerializeField] AudioSource _fxPlayer;
     [SerializeField] AudioSource _fxPlayer2;
-    [SerializeField] Slider _BGMSlider;
+    Slider _BGMSlider;
  
     private void Awake()
     {
@@ -25,19 +25,17 @@ public class SoundController : MonoBehaviour
         }
         _BGMPlayer.mute = false;
         _BGMPlayer.volume = 1f;
-        _BGMSlider.value = 1f;
+    }
+
+    public void Init(Slider slider)
+    {
+        _BGMSlider = slider;
+        _BGMSlider.value = 1;
     }
 
     public void OnbgmMute()
     {
         _BGMPlayer.mute = !_BGMPlayer.mute;
-    }
-
-    public void OnBtnPlayBgm()
-    {
-    //    _BGMPlayer.clip = _BGM;
-    //    _BGMPlayer.Play();
-        _BGMSlider.gameObject.SetActive(!_BGMSlider.isActiveAndEnabled);
     }
 
     public void OnBtnPlayFx()

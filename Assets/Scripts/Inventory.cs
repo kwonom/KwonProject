@@ -1,27 +1,8 @@
 using UnityEngine;
 
-public enum EPlayerState
-{
-    Black,
-    Blue,
-    Green,
-}
 public class Inventory : MonoBehaviour
 {
-    public static Inventory Instance;
-
-    private void Awake()
-    {
-        if(Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    
     void Start()
     {
         
@@ -30,5 +11,25 @@ public class Inventory : MonoBehaviour
      void Update()
     {
         
+    }
+
+    public void OnBtnBlue()
+    {
+
+    }
+
+    public void OnBtnPink()
+    {
+
+    }
+
+    public void OnBtnGreen()
+    {
+
+    }
+
+    public void OnBtnYellow()
+    {
+
     }
 }
