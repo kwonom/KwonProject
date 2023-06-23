@@ -22,7 +22,6 @@ public class ColorSave : MonoBehaviour
     public void ColorChange(Color color)
     {
         _color = color;
-        
     }
 
     public Color GetColor()
