@@ -7,11 +7,6 @@ public class ObstacleController : MonoBehaviour
 
     float _timer = 0;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         _timer += Time.deltaTime;
@@ -25,5 +20,4 @@ public class ObstacleController : MonoBehaviour
             transform.position = obspos;
         }
     }
-
 }

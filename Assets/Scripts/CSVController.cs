@@ -4,7 +4,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-
 public class CSVController : MonoBehaviour
 {
     public List<RankingData> _lstRanking = new List<RankingData>();
@@ -12,7 +11,6 @@ public class CSVController : MonoBehaviour
     {
         ReadCSV();
         WriteCSV();
-        Debug.Log("csv에서 호출되었습니다.");
     }
 
     public void WriteCSV()

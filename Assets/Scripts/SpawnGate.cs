@@ -6,7 +6,6 @@ public class SpawnGate : MonoBehaviour
     {
         if(collision.gameObject.name == "Brick")
         {
-            Debug.Log("게이트 생성");
             collision.GetComponent<Brick>().spGate();
         }    
     }

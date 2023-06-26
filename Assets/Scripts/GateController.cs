@@ -8,7 +8,6 @@ public class GateController : MonoBehaviour
     void Start()
     {
         makeGate();
-        Debug.Log("게이트에서 호출되었습니다.");
     }
 
     public void makeGate()
@@ -27,7 +26,6 @@ public class GateController : MonoBehaviour
     public void SpawnGate()
     {
         int rand = Random.Range(0, _gates.Length);
-        Debug.Log("게이트 확인");
         GameObject temp = Instantiate(_gates[rand]);
         float height = temp.GetComponent<GateData>().getGate();
         temp.transform.position += new Vector3(0, sumHeight + height, 0);

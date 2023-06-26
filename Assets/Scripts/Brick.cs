@@ -13,7 +13,6 @@ public class Brick : MonoBehaviour
     [SerializeField] GameObject _OptionUI;
 
     int score = 0;
-    float _lifetimer;
     bool _isGameover = false;
     bool _isGameStart = false;
 
@@ -21,13 +20,13 @@ public class Brick : MonoBehaviour
     {
         Application.targetFrameRate = 30;
         Time.timeScale = 0;
-        Debug.Log("브릭에서 호출되었습니다.");
         GetComponent<SpriteRenderer>().color = ColorSave.instance.GetColor();
+        GetComponent<SpriteRenderer>().sprite = ColorSave.instance.GetSprite();
+        transform.localScale = new Vector3(ColorSave.instance.GetX(), ColorSave.instance.GetY(), 1);
     }
 
     void Update()
     {
-        _lifetimer += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.A))
         {
             rb.velocity = new Vector2(-xjump, yjump);
@@ -42,16 +41,11 @@ public class Brick : MonoBehaviour
             _isGameStart = true;
             SoundController.instance.OnBtnPlayFx();
         }
-        if (_lifetimer > 5)
-        {
-            _lifetimer = 0;
-            Time.timeScale = 2.2f;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground") // 여기까지 진행.
+        if (collision.gameObject.tag == "Ground")
         {
             SoundController.instance.OnBtnPlayFx2();
             Time.timeScale = 0;
@@ -78,7 +72,7 @@ public class Brick : MonoBehaviour
     {
         if (_isGameStart == false)
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 2.2f;
         }
     }
 
